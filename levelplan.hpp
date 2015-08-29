@@ -16,7 +16,7 @@ public:
     LevelPlain(float gx,float gy,float gz)
     {
         
-        length=2*sqrt(gx*gx+gy*gy+gz*gz);
+        r=2*sqrt(gx*gx+gy*gy+gz*gz);
         
         a = gx+length/2;
         b = -gy+length/2;
@@ -27,7 +27,7 @@ public:
     
     
     
-    float length=0;
+    float re0;
     float x=0;
     float y=0;
     
