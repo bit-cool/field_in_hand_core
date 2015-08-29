@@ -12,21 +12,26 @@ class LowPass{
 public:
 
     
+    
+    LowPass()
+    {
+    }
     LowPass(double newx, double newy ,double newz)
+    {
+        x=newx;
+        y=newy;
+        z=newz;
+
+    }
+    //在构造函数中设定最后一组数值为固定值，留待下一次作为初始值使用
+    
+    setter（double newx, double newy ,double newz）
     {
         x=x+ALPHA*(newx-x);
         y=y+ALPHA*(newy-y);
         z=z+ALPHA*(newz-z);
     }
-    //在构造函数中对新的输入值进行获取
-    
-    setter（double newx, double newy ,double newz）
-    {
-        x=newx;
-        y=newy;
-        z=newz;
-    }
-    //在设备稳定不动后设定最后一组数值为固定值，留待下一次作为初始值使用
+    //对新的输入值进行获取
     
     
     double x=0;
